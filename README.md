@@ -22,8 +22,8 @@ Construye la aplicación para producción en la carpeta build
   ### Screenshot
 
 <img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen-destok.PNG" alt="">
-<div style=" display: grid; grid-template-columns: repeat(2, 1fr)" class="container">
-  <div> <img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen%20formulario-mobile.jpeg" alt=""></div>
-<div> <img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen-orden-mobile.jpeg" alt=""></div>
-</div>
+
+ <img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen%20formulario-mobile.jpeg" alt="">
+<img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen-orden-mobile.jpeg" alt="">
+
 
