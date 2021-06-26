@@ -1,0 +1,14 @@
+@import "../../../theme-color"
+.container-product
+    display: grid
+    grid-template-columns: repeat(3,25% 50% 25%)
+    .container-product-item
+        padding: 10px
+        border-bottom: solid 1px $color-lightgray
+        font-size: 14px
+.container-product .container-product-item:nth-child(3)
+    padding-left: 0
+    text-align: left
+@media (min-width: 576px)
+    .container-product .container-product-item:nth-child(3)
+        padding: 10px

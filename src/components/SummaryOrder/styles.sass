@@ -1,1 +1,44 @@
-.sumary-order
+@import "../../theme-color"
+.container-sumary-order
+    border: solid 1px $color-lightgray
+    .container-sumary-title
+        background-color: $color-lightgray
+        padding: 15px 10px
+        h3
+            margin: 0
+            padding: 0
+            text-align: center
+    .container-sumary-edit
+        padding: 20px
+        height: 40px
+        .btn-danger
+            float: right
+    .container-sumary-subtotal
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        padding: 0px
+        background-color: red
+        background-color: $color-lightgray
+        div
+            padding: 0px 20px
+        p
+            font-weight: bold
+        .shipping-calculated
+            position: relative
+            top: -15px
+
+    .container-sumary-subtotal div:nth-child(2)
+        p
+            text-align: right
+    .container-sumary-total
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        background-color: $color-black
+        color: $color-white
+
+        div
+            padding: 0px 20px
+    .container-sumary-total div:nth-child(2)
+
+        p
+            text-align: right
