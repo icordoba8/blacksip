@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect } from "react";
 import { ProductService } from "../../../services/products";
 import Item from "../Item";
 const ListItems = ({ products, setProduts }: any) => {
-  useEffect(() => {
-    listProducts();
-  }, []);
-
-  const listProducts = async () => {
+  const listProducts = useCallback(async () => {
     const { data, error } = await ProductService.getProducts();
     if (error) {
       return;
     }
     setProduts(data);
-  };
+  }, [setProduts]);
+
+  useEffect(() => {
+    listProducts();
+  }, [listProducts]);
 
   return (
     <>

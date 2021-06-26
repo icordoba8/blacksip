@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./styles.sass";
@@ -7,14 +7,21 @@ import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 const Select = (props: any) => {
   const { name, placeholder, state, setState, colonies, onChange, icon } =
     props;
+
   const [hide, setHide] = useState<boolean>(true);
+  const inputEl = useRef<any>(null);
 
   const datalist = (e: any, item?: any) => {
     const { type } = e;
-    console.log(type);
     if (type === "click" && item) {
       setState({ ...state, [name]: item });
     }
+
+    if (type === "click" && !item) {
+      inputEl.current.focus();
+      return;
+    }
+
     if (type === "blur") {
       setTimeout(() => {
         setHide(!hide);
@@ -38,11 +45,10 @@ const Select = (props: any) => {
         autoComplete="nope"
         onFocus={(e) => datalist(e)}
         onBlur={(e) => datalist(e)}
+        ref={inputEl}
       />
       <FontAwesomeIcon
-        onClick={(e) => {
-          datalist(e);
-        }}
+        onClick={(e) => datalist(e)}
         className="dropdown"
         icon={faSortDown}
       />

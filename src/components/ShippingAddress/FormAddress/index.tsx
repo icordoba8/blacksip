@@ -21,9 +21,9 @@ const FormAddress = () => {
       ? setState({ ...state, [name]: checked })
       : setState({ ...state, [name]: value });
   };
-  const onSubmit = async (event: any) => {
+  const onSubmitAddress = async (event: any) => {
     event.preventDefault();
-    const { data, error } = await AddressService.create(state);
+    const { error } = await AddressService.create(state);
     if (error) {
       swal("", error.message, "error");
       return;
@@ -33,9 +33,11 @@ const FormAddress = () => {
   };
 
   const getColonies = async (event: any) => {
-    if (!state.code) {
+    if (!state.code || state.code.length <= 3) {
+      clearIunputCode([], {});
       return;
     }
+
     const { data, error } = await AddressService.searchCode(state.code);
     if (error) {
       swal("", error.message, "error");
@@ -43,30 +45,28 @@ const FormAddress = () => {
     }
 
     if (!data.code) {
-      setState({
-        ...state,
-        city: "",
-        state: "",
-        town: "",
-        suburb: "",
-      });
-      setColonies([]);
+      clearIunputCode([], data);
       return;
     }
-    const { city, state: region, town, colonies } = data;
 
+    const { colonies } = data;
+    clearIunputCode(colonies, data);
+  };
+  const clearIunputCode = (colonies: any, data: any) => {
+    const { city, stateRegion, street, town } = data;
     setState({
       ...state,
       city: colonies.length > 0 ? city : "",
-      state: colonies.length > 0 ? region : "",
+      state: colonies.length > 0 ? stateRegion : "",
       town: colonies.length > 0 ? town : "",
       suburb: colonies.length === 1 ? colonies[0] : "",
+      street: colonies.length === 1 ? street : "",
     });
     setColonies(colonies);
   };
 
   return (
-    <form onSubmit={onSubmit} autoComplete="disabled">
+    <form onSubmit={onSubmitAddress} autoComplete="disabled">
       <div className="content-form-address">
         <div className="content-form-input">
           <Input
