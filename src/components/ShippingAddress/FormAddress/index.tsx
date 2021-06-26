@@ -53,7 +53,7 @@ const FormAddress = () => {
     clearIunputCode(colonies, data);
   };
   const clearIunputCode = (colonies: any, data: any) => {
-    const { city, stateRegion, street, town } = data;
+    const { city, state: stateRegion, street, town } = data;
     setState({
       ...state,
       city: colonies.length > 0 ? city : "",
