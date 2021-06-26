@@ -1,0 +1,52 @@
+@import "../../../theme-color"
+.select-container
+    position: relative
+    max-width: 100%
+    min-width: 200px
+    display: grid
+    grid-template-columns: 45px calc(100% - 45px)
+    grid-template-rows: 1fr
+    grid-gap: 0px 0px
+    .select-icon
+        background-color: $color-black
+        border: solid 1px $color-black
+        text-align: center
+        padding: 7px
+        svg
+            color: $color-white
+    input
+        padding: 0.5rem 0.75rem
+        -webkit-border-radius: 2px
+        border-radius: 2px
+        background-color: $color-white
+        border: solid 1px $color-lightgray
+        height: 22px
+        outline: none
+        position: relative
+    .datalist
+        position: absolute
+        height: auto
+        max-height: 300px
+        top: 100%
+        z-index: 1000
+        background-color: $color-white
+        overflow: auto
+        border: solid 1px $color-lightgray
+        border-top: 0px
+        border-radius: 0px 0 5px 5px
+        width: 99.5%
+        ul
+            padding-left: 0
+            li
+                list-style: none
+                padding: .5rem
+                cursor: pointer
+            li:hover
+                background-color: $color-darkgray
+    .hide
+        display: none
+    .dropdown
+        position: absolute
+        right: 13px
+        top: 7px
+        cursor: pointer

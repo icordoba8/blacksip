@@ -1,6 +1,5 @@
 import React from "react";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import Input from "../CustomImputs/Input";
+import FormAddress from "./FormAddress";
 import "./styles.sass";
 const ShippingAddress = () => {
   return (
@@ -9,7 +8,7 @@ const ShippingAddress = () => {
         <div className="shipping-address-title">
           <h3>DIRECCIÓN DE ENVÍO</h3>
         </div>
-        <Input icon={faUser} />
+        <FormAddress />
       </div>
     </div>
   );

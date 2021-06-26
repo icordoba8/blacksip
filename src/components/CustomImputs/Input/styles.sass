@@ -2,27 +2,27 @@
 .input-container
     overflow: auto
     position: relative
-    background-color: $color-white
-    border: solid 1px $color-lightgray
-    max-width: 94%
+
+    max-width: 100%
     min-width: 200px
     display: grid
     grid-template-columns: 45px calc(100% - 45px)
     grid-template-rows: 1fr
     grid-gap: 0px 0px
-    gap: 0px 0px
     .input-icon
         background-color: $color-black
+        border: solid 1px $color-black
         text-align: center
-        padding: 6px
+        padding: 7px
         svg
             color: $color-white
     input
-        padding: 7px 60px 9px 15px
+        padding: 0.5rem 0.75rem
         -webkit-border-radius: 2px
         border-radius: 2px
         background-color: $color-white
-        border: 0
+        border: solid 1px $color-lightgray
+
         height: 22px
         outline: none
         position: relative
