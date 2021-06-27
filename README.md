@@ -18,12 +18,12 @@ Inicia pruebas render de los componetes
 
 Construye la aplicación para producción en la carpeta build
 
-  
-  ### Screenshot
+### Screenshot
 
 <img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen-destok.PNG" alt="">
 
  <img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen%20formulario-mobile.jpeg" alt="">
 <img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen-orden-mobile.jpeg" alt="">
 
-
+<img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen-furmario-mobile-landscape.jpeg" alt="">
+<img src="https://github.com/icordoba8/blacksip/blob/master/screenshot/imagen-furmario-mobile-landscape-2.jpeg" alt="">
