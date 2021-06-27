@@ -1,4 +1,4 @@
-# Este proyecto esta creado co react
+# Este proyecto esta creado con react
 
 A continuación, tenemos una secuencia de comnados a utilizar antes de subir el server web
 
